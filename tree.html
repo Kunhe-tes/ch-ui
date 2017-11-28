@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>树型菜单Demo</title>
+		<link rel="stylesheet" type="text/css" href="css/ch-ui.css"/>
+		<style type="text/css">
+			.test-tree1{width: 180px;height: 700px;padding: 20px;border: 1px solid #666;position: absolute;}
+		</style>
+	</head>
+	<body>
+		<div class="test-tree1"></div>
+		<div class="test-tree2"></div>
+		<script src="js/libs/bower_components/jquery/dist/jquery.js"></script>
+		<script src="js/apps/ch-ui.js"></script>
+		<script>
+			//调用
+	        $('.test-tree1').tree([{
+	            name: '运动服饰',
+	            id: '1',
+	            spread: 'true',
+	            children: [{
+	                name: '上衣',
+	                id: '11',
+	                children: [{
+	                    name: '夹克',
+	                    id: '111'
+	                },{
+	                    name: '卫衣',
+	                    id: '112'
+	                },{
+	                    name: '背心',
+	                    id: '113'
+	                }]
+	            },{
+	                name: '下装',
+	                id: '12',
+	                children: [{
+	                    name: '牛仔裤',
+	                    id: '121'
+	                },{
+	                    name: '休闲裤',
+	                    id: '122'
+	                }]
+	            }]
+	        },{
+	            name: '商务休闲',
+	            id: '2',
+	            children:[{
+	                name: '西服',
+	                id: '21'
+	            },{
+	                name: '皮靴',
+	                id: '22',
+	                children: [{
+	                    name: '皮鞋',
+	                    id: '221'
+	                },{
+	                    name: '短筒靴',
+	                    id: '222'
+	                },{
+	                    name: '长筒靴',
+	                    id: '223'
+	                }]
+	            }]
+	        },{
+	            name: '日常穿搭',
+	            id: '3'
+	        }]);
+		</script>
+	</body>
+</html>

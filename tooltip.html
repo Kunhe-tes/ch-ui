@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>提示框Demo</title>
+		<link rel="stylesheet" type="text/css" href="css/ch-ui.css"/>
+		<style>
+			h1{position: relative;top: 50px;left: 120px;}
+			.test{ position: relative;display: inline-block;top: 100px;left: 120px;}
+			.cont-text{display: inline-block;padding: 8px 16px;text-align: center;border: 1px solid #000;border-radius: 4px;line-height: 1.42857143;cursor: pointer;}
+			.tooltip5{margin-left: 80px;}
+			.tooltip6{margin-left: 30px;}
+		</style>
+	</head>
+	<body>
+		<h1>提示框Demo</h1>
+		<div class="test test-tooltip1">
+	        <a class="cont-text">演示按钮1</a>
+	    </div>
+	    <div class="test test-tooltip2">
+	        <a class="cont-text">演示按钮2</a>
+	    </div>
+	    <div class="test test-tooltip3">
+	        <a class="cont-text">演示按钮3</a>
+	    </div>
+	    <div class="test test-tooltip4" tabindex="-1">
+	        <a class="cont-text">演示按钮4</a>
+	    </div>
+	    
+		<div class="test tooltip5">
+	        <a class="cont-text">演示按钮5-1</a>
+	    </div>
+	    <div class="test tooltip6">
+	        <a class="cont-text">演示按钮5-2</a>
+	    </div>
+
+		<script src="js/libs/bower_components/jquery/dist/jquery.js"></script>
+		<script src="js/apps/ch-ui.js"></script>
+		<!-- 调用 -->
+		<script>
+			//调用方式一
+			$(".test-tooltip1").tooltip({
+	            direct: "left",
+	            content: "左测",
+	            trigger: ["click"]
+	        });
+	        $(".test-tooltip2").tooltip({
+	            direct: "top",
+	            content: "提示框显示在上",
+	            trigger: ["click"]
+	        });
+	        $(".test-tooltip3").tooltip({
+	            direct: "bottom",
+	            content: "提示框显示在下",
+	            trigger: ["click"]
+	        });
+	        $(".test-tooltip4").tooltip({
+	            direct: "right",
+	            content: "右侧",
+	            trigger: ["click"]
+	        });
+	        //调用方式二（手动调用）
+	        $(".tooltip6").tooltip({
+			    direct: 'top',
+			    content: 'content',
+			    trigger: ['manual']
+			});
+			$('.tooltip5').hover(function(){
+			    $(".tooltip6").tooltip('show');
+			},function(){
+			    $(".tooltip6").tooltip('hide');
+			});
+	        
+	        
+		</script>
+	</body>
+</html>

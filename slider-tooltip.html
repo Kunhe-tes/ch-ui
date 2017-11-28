@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滑块提示框Demo</title>
+		<link rel="stylesheet" type="text/css" href="css/ch-ui.css"/>
+		<style type="text/css">
+			.slider-tooltip{width: 400px;position: relative;top: 100px;left: 150px;}
+			h1{position: relative;top: 60px;left: 150px;}
+		</style>
+	</head>
+	<body>
+		<h1>滑块提示框Demo</h1>
+		<div class="slider-tooltip"></div>
+
+		<script src="js/libs/bower_components/jquery/dist/jquery.js"></script>
+		<script src="js/apps/ch-ui.js"></script>
+		<!-- 调用 -->
+		<script>
+			$('.slider-tooltip').slider({
+	            value: '20',           //传入0到100的数字，表示百分比
+	            sort: 'max',           //排序：max表示从小到大，min表示从大到小
+	            min: 0,
+	            max: 400,
+	            slideEvent: function(val){
+	                $('.ch-ui-slider-box').tooltip('show');
+	                $('.ch-ui-tooltip-inner').html(val);
+	            }
+	        });
+	        $(".ch-ui-slider-box").tooltip({
+	            direct: 'top',
+	            trigger: ['manual']
+	        });
+		</script>
+	</body>
+</html>

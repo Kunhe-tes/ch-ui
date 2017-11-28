@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/ch-ui.css">
+    <title>test</title>
+</head>
+<style type="text/css">
+    #test{
+        position: absolute;
+        width: 640px;
+        height: 360px;
+        top: 50%;
+        left: 50%;
+        margin-top: -180px;
+        margin-left: -320px;
+        overflow: hidden;
+    }
+
+    #test .lt,.gt{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 26px;
+        z-index: 999999;
+        top: 50%;
+        margin-top: -25px;
+        cursor: pointer;
+    }
+    #test .lt{
+        left: 0;
+    }
+    #test .gt{
+        right: 0;
+    }
+
+    #test .container{
+        position: absolute;
+        width: 1280px;
+        height: 100%;
+        overflow: hidden;
+    }
+    #test .container img{
+        display: inline-block;
+        height: 100%;
+        width: 640px;
+        float: left;
+    }
+    #test .indicators{
+        position: absolute;
+        text-align: center;
+        bottom: 20px;
+        width: 100%;
+    }
+    #test .indicators img{
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        background-color: cadetblue;
+        cursor: pointer;
+    }
+    #test .indicators img.active{
+        border: 2px solid red;
+    }
+</style>
+<body>
+<div id="test">
+    <div class="lt">&lt;</div>
+    <div class="gt">&gt;</div>
+    <div class="container">
+        <img src="imgs/e1.jpg" />
+        <img src="imgs/e2.jpg" />
+        <img src="imgs/e3.jpg" />
+        <img src="imgs/e4.jpg" />
+        <img src="imgs/e5.jpg" />
+        <img src="imgs/e6.jpg" />
+    </div>
+    <div class="indicators">
+        <img src="imgs/e1.jpg" class="active"/>
+        <img src="imgs/e2.jpg" />
+        <img src="imgs/e3.jpg" />
+        <img src="imgs/e4.jpg" />
+        <img src="imgs/e5.jpg" />
+        <img src="imgs/e6.jpg" />
+    </div>
+</div>
+
+
+
+<script src="js/libs/bower_components/jquery/dist/jquery.js"></script>
+<script src="js/apps/ch-ui.js"></script>
+<script>
+    $("#test").carousel({
+        distance: "640px",
+        prev: ".lt",
+        next: ".gt",
+        itemsContainer: ".container",
+        items: ".container>img",
+        duration: 1200,
+        delay: 1200,
+        easing: "swing",
+        indicators: {
+            selector: ".indicators>img",
+            activeClass: "active",
+            trigger: "mouseenter"
+        }
+    });
+
+
+</script>
+</body>
+</html>
