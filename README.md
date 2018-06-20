@@ -1,5 +1,5 @@
 # ch-ui
-A javascript ui plug-in include some common effects, such as drop-down menu, slider, modal box and banners, which is based on javascript prototype.
+A javascript ui plug-in include some common demos, such as drop-down menu, slider, modal box and banners, which is based on javascript prototype.
 
 explain:
 
@@ -13,3 +13,20 @@ explain:
 
  support IE9+ and other browers
 
+## directory
+```
+
+├── css                     插件默认样式
+├── imgs                    图片
+├── js                      
+    |—— apps                
+    |—— ch-ui.js            核心JS文件
+├── dropdown.html           组件展示页面
+├── ......                  （同上）
+
+
+```
+
+## how to use
+
+There are some examples in html files.Open them.
