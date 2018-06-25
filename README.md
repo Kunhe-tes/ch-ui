@@ -16,15 +16,23 @@ explain:
 ## directory
 ```
 
-├── css                     插件默认样式
-├── imgs                    图片
+├── css                      插件默认样式
+├── imgs                     图片
 ├── js                      
     |—— apps                
-    |—— ch-ui.js            核心JS文件
-├── dropdown.html           组件展示页面
-├── ......                  （同上）
-
-
+      |—— ch-ui.js             插件核心JS文件
+    |—— libs                   依赖JS文件
+├── carousel-banner.html       banner滚动
+├── carousel-indicate.html     banner滚动（带缩略图）
+├── carousel-roll.html         banner滚动（多图滚动）
+├── dropdown.html              下拉菜单
+├── hd-table.html              表格
+├── modal-preview.html         模态框（带预览）
+├── modal.html                 通用模态框
+├── slider-tooltip.html        滑块提示框
+├── slider.html                滑块
+├── tooltip.html               提示框
+├── tree.html                  树形菜单
 ```
 
 ## how to use
