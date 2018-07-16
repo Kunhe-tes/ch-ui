@@ -1,5 +1,5 @@
 # ch-ui
-A javascript ui plug-in include some common demos, such as drop-down menu, slider, modal box and banners, which is based on javascript prototype.
+A javascript ui plug-in include some common demos, such as drop-down menu, slider, modal box and banners, which is reference to Bootstrap source code.
 
 explain:
 
