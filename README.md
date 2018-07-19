@@ -37,4 +37,6 @@ explain:
 
 ## how to use
 
-There are some examples in html files.Open them.
+There are some examples in html files.
+First, extract the ch-ui.js and jquery.min.js.
+Then, add to your project, and use them just like given examples.
