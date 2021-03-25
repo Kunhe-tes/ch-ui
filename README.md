@@ -1,5 +1,5 @@
 # ch-ui
-A javascript ui component include some common demos, such as drop-down menu, slider, modal box and banners, which is reference to Bootstrap source code.
+Some javascript ui components, dropdown, slider, tooltip and so on. Based on jQuery.
 
 explain:
 
