@@ -1,8 +1,5 @@
 /****************************************
  Copyright (c) 2017 HD and HK
- http://blog.csdn.net/darinzanya
- https://git.oschina.net/darinhk
-
  ch-ui.js 1.0 buint in 2017.4.6
  support IE9+ and other browers
  *****************************************/
